@@ -220,6 +220,7 @@ class CustomerController extends BaseController
         $post = Slot::find($customer->slot_id);
         $post->is_slot = 0;
         $post->save();
+        $success="checkoff";
         return $this->sendResponse($success, $request->customer_name.'Thanks come again');
         }
 
